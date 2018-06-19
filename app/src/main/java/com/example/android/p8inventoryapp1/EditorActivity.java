@@ -20,11 +20,6 @@ import android.widget.Toast;
 import com.example.android.p8inventoryapp1.data.InventoryContract.InventoryEntry;
 import com.example.android.p8inventoryapp1.data.InventoryDbHelper;
 
-import java.util.List;
-
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 public class EditorActivity extends AppCompatActivity {
 
     private EditText mItemnameEditText;
@@ -51,14 +46,13 @@ public class EditorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
 
-        ButterKnife.inject(this);
-        @InjectView({ R.id.edit_item_name, R.id.edit_price, R.id.edit_amount, R.id.edit_client_name })
-        List<EditText>  mItemname,mItemprice,mAmount,mClientname;
-
+        mItemnameEditText = (EditText)findViewById(R.id.edit_item_name);
+        mItempriceEditText =(EditText) findViewById(R.id.edit_price);
+        mAmountEditText = (EditText)findViewById(R.id.edit_amount);
 
         mSizeSpinner =(Spinner) findViewById(R.id.spinner_size);
 
-        //mClientnameEditText =(EditText) findViewById(R.id.edit_client_name);
+        mClientnameEditText =(EditText) findViewById(R.id.edit_client_name);
 
         setupSpinner();
     }
@@ -88,7 +82,7 @@ public class EditorActivity extends AppCompatActivity {
                     } else if (selection.equals(getString(R.string.size_large))) {
                         mSize = InventoryEntry.SIZE_LARGE;
                     }else if (selection.equals(getString(R.string.size_xlarge))) {
-                            mSize = InventoryEntry.SIZE_XLARGE;
+                        mSize = InventoryEntry.SIZE_XLARGE;
                     } else {
                         mSize = InventoryEntry.SIZE_SMALL;
                     }
