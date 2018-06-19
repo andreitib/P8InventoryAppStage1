@@ -25,6 +25,6 @@ public final class InventoryContract {
         public static final String SIZE_SMALL = "S";
         public static final String SIZE_MEDIUM = "M";
         public static final String SIZE_LARGE = "L";
-
+        public static final String SIZE_XLARGE = "XL";
     }
 }

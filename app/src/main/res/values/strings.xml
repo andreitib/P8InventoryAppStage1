@@ -12,7 +12,7 @@
     <string name="action_delete">Delete</string>
     <string name="action_delete_all_entries">Delete All Items</string>
 
-    <!-- Label for gender information in the editor [CHAR LIMIT=30] -->
+    <!-- Label for size information in the editor [CHAR LIMIT=30] -->
     <string name="category_size">Size</string>
     <!-- Label for dropdown menu option if the item size is Small [CHAR LIMIT=20] -->
     <string name="size_small">Small</string>
@@ -22,7 +22,11 @@
 
     <!-- Label for dropdown menu option if the item size is Large [CHAR LIMIT=20] -->
     <string name="size_large">Large</string>
-
+    <!-- Label for dropdown menu option if the item size is XLarge [CHAR LIMIT=20] -->
+    <string name="size_xlarge">XLarge</string>
 
     <string name="editor_activity_title_new_item">Add a new product</string>
+
+    <string name="name_client">Client Name</string>
+
 </resources>

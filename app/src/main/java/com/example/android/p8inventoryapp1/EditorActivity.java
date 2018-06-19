@@ -29,12 +29,12 @@ public class EditorActivity extends AppCompatActivity {
     private EditText mAmountEditText;
 
 
-    /** EditText field to enter the pet's gender */
+    /** EditText field to enter the product size */
     private Spinner mSizeSpinner;
     /**
      * Size of the items. The possible valid values are in the InventoryContract.java file:
      * {@link InventoryEntry#SIZE_SMALL}, {@link InventoryEntry#SIZE_MEDIUM}, or
-     * {@link InventoryEntry#SIZE_LARGE}.
+     * {@link InventoryEntry#SIZE_LARGE},{@link InventoryEntry#SIZE_XLARGE}.
      */
     private String mSize = InventoryEntry.SIZE_SMALL;
 
@@ -81,6 +81,8 @@ public class EditorActivity extends AppCompatActivity {
                         mSize = InventoryEntry.SIZE_MEDIUM;
                     } else if (selection.equals(getString(R.string.size_large))) {
                         mSize = InventoryEntry.SIZE_LARGE;
+                    }else if (selection.equals(getString(R.string.size_xlarge))) {
+                            mSize = InventoryEntry.SIZE_XLARGE;
                     } else {
                         mSize = InventoryEntry.SIZE_SMALL;
                     }

@@ -42,22 +42,16 @@ public class CatalogActivity extends AppCompatActivity {
                 Intent intent = new Intent(CatalogActivity.this, EditorActivity.class);
                 startActivity(intent);
 
-
             }
         });
         // To access database, instantiate subclass of SQLiteOpenHelper and pass context, current activity
         mDbHelper = new InventoryDbHelper(this);
-
-
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         displayDatabaseInfo();
     }
-
-
 
     private void displayDatabaseInfo() {
 
@@ -119,8 +113,6 @@ public class CatalogActivity extends AppCompatActivity {
                         currentAmount + " - " +
                         currentSize + " - " +
                         currentClientName));
-
-
             }
         } finally {
             cursor.close();

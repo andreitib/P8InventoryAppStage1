@@ -23,7 +23,7 @@
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:paddingLeft="4dp"
             android:orientation="vertical">
 
@@ -40,8 +40,10 @@
                 android:id="@+id/edit_amount"
                 android:hint="@string/hint_amount"
                 style="@style/EditorFieldStyle" />
+        </LinearLayout>
+    </LinearLayout>
 
-            <!-- Gender category -->
+    <!-- Size category -->
             <LinearLayout
                 android:id="@+id/container_size"
                 android:layout_width="match_parent"
@@ -71,13 +73,20 @@
             </LinearLayout>
 
 
-
-
+    <!-- Client Details -->
+    <LinearLayout
+        android:id="@+id/container_measurement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <TextView
+                android:text="@string/name_client"
+                style="@style/CategoryStyle" />
             <EditText
                 android:id="@+id/edit_client_name"
                 android:hint="@string/hint_name_client"
-                style="@style/EditorFieldStyle" />
-        </LinearLayout>
+                style="@style/EditorFieldStyle"
+                android:layout_marginLeft="20dp"/>
     </LinearLayout>
 
 </LinearLayout>
