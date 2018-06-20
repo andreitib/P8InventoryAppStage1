@@ -29,10 +29,11 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
         String SQL_CREATE_INVENTORY_TABLE = "CREATE TABLE " + InventoryEntry.TABLE_NAME + "("
                 + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + InventoryEntry.COLUMN_ITEM_NAME + " TEXT NOT NULL, "
-                + InventoryEntry.COLUMN_ITEM_PRICE + " INTEGER NOT NULL,, "
-                + InventoryEntry.COLUMN_AMOUNT + " INTEGER NOT NULL,, "
+                + InventoryEntry.COLUMN_ITEM_PRICE + " INTEGER NOT NULL, "
+                + InventoryEntry.COLUMN_AMOUNT + " INTEGER NOT NULL, "
                 + InventoryEntry.COLUMN_SIZE + " TEXT, "
-                + InventoryEntry.COLUMN_CLIENT_NAME + " TEXT );";
+                + InventoryEntry.COLUMN_SUPPLIER_NAME + " TEXT NOT NULL, "
+                + InventoryEntry.COLUMN_SUPPLIER_PHONE + " TEXT );";
 
             Log.e(LOD_TAG, "There is a problem making the HTTP request.");
         db.execSQL(SQL_CREATE_INVENTORY_TABLE);

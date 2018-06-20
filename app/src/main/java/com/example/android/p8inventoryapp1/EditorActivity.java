@@ -39,8 +39,8 @@ public class EditorActivity extends AppCompatActivity {
     private String mSize = InventoryEntry.SIZE_SMALL;
 
 
-    private EditText mClientnameEditText;
-
+    private EditText mSuppliernameEditText;
+    private EditText mSupplierphoneEditText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +52,8 @@ public class EditorActivity extends AppCompatActivity {
 
         mSizeSpinner =(Spinner) findViewById(R.id.spinner_size);
 
-        mClientnameEditText =(EditText) findViewById(R.id.edit_client_name);
-
+        mSuppliernameEditText =(EditText) findViewById(R.id.edit_supplier_name);
+        mSupplierphoneEditText =(EditText) findViewById(R.id.edit_supplier_phone);
         setupSpinner();
     }
     /**
@@ -113,7 +113,8 @@ public class EditorActivity extends AppCompatActivity {
         int price = Integer.parseInt(priceString);
         String amountString = mAmountEditText.getText().toString().trim();
         int amount = Integer.parseInt(amountString);
-        String clientString = mClientnameEditText.getText().toString().trim();
+        String suppliernameString = mSuppliernameEditText.getText().toString().trim();
+        String supplierphoneString = mSupplierphoneEditText.getText().toString().trim();
 
 
         InventoryDbHelper mdbHelper = new InventoryDbHelper(this);
@@ -125,8 +126,8 @@ public class EditorActivity extends AppCompatActivity {
         values.put(InventoryEntry.COLUMN_ITEM_PRICE, price);
         values.put(InventoryEntry.COLUMN_AMOUNT, amount);
         values.put(InventoryEntry.COLUMN_SIZE, mSize);
-        values.put(InventoryEntry.COLUMN_CLIENT_NAME, clientString);
-
+        values.put(InventoryEntry.COLUMN_SUPPLIER_NAME, suppliernameString);
+        values.put(InventoryEntry.COLUMN_SUPPLIER_PHONE, supplierphoneString);
         long newRowId = db.insert(InventoryEntry.TABLE_NAME, null, values);
 
 
@@ -160,5 +161,4 @@ public class EditorActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

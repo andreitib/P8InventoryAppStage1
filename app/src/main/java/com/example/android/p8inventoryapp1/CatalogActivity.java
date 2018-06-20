@@ -63,7 +63,8 @@ public class CatalogActivity extends AppCompatActivity {
                 InventoryEntry.COLUMN_ITEM_PRICE,
                 InventoryEntry.COLUMN_AMOUNT,
                 InventoryEntry.COLUMN_SIZE,
-                InventoryEntry.COLUMN_CLIENT_NAME
+                InventoryEntry.COLUMN_SUPPLIER_NAME,
+                InventoryEntry.COLUMN_SUPPLIER_PHONE
         };
 
 
@@ -87,7 +88,8 @@ public class CatalogActivity extends AppCompatActivity {
                     InventoryEntry.COLUMN_ITEM_PRICE + " - " +
                     InventoryEntry.COLUMN_AMOUNT + " - " +
                     InventoryEntry.COLUMN_SIZE + " - " +
-                    InventoryEntry.COLUMN_CLIENT_NAME + "\n");
+                    InventoryEntry.COLUMN_SUPPLIER_NAME + " - " +
+                    InventoryEntry.COLUMN_SUPPLIER_PHONE + "\n");
 
 
             int idColumnIndex = cursor.getColumnIndex(InventoryEntry._ID);
@@ -95,7 +97,8 @@ public class CatalogActivity extends AppCompatActivity {
             int ItempriceColumnIndex = cursor.getColumnIndex(InventoryEntry.COLUMN_ITEM_PRICE);
             int AmountColumnIndex = cursor.getColumnIndex(InventoryEntry.COLUMN_AMOUNT);
             int SizeColumnIndex = cursor.getColumnIndex(InventoryEntry.COLUMN_SIZE);
-            int ClientnameColumnIndex = cursor.getColumnIndex(InventoryEntry.COLUMN_CLIENT_NAME);
+            int SuppliernameColumnIndex = cursor.getColumnIndex(InventoryEntry.COLUMN_SUPPLIER_NAME);
+            int SupplierphoneColumnIndex = cursor.getColumnIndex(InventoryEntry.COLUMN_SUPPLIER_PHONE);
 
 
             while(cursor.moveToNext()) {
@@ -105,14 +108,16 @@ public class CatalogActivity extends AppCompatActivity {
                 int currentItemprice = cursor.getInt(ItempriceColumnIndex);
                 int currentAmount = cursor.getInt(AmountColumnIndex);
                 String currentSize = cursor.getString(SizeColumnIndex);
-                String currentClientName = cursor.getString(ClientnameColumnIndex);
+                String currentSuppliername = cursor.getString(SuppliernameColumnIndex);
+                String currentSupplierphone = cursor.getString(SupplierphoneColumnIndex);
 
                 displayView.append(("\n" + currentID + " - " +
                         currentItemname + " - " +
                         currentItemprice + " - " +
                         currentAmount + " - " +
                         currentSize + " - " +
-                        currentClientName));
+                        currentSuppliername + " - " +
+                        currentSupplierphone));
             }
         } finally {
             cursor.close();

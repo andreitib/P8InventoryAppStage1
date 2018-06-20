@@ -7,7 +7,8 @@
     <string name="hint_item_name">Write item name</string>
     <string name="hint_amount">Write the amount</string>
     <string name="hint_size">What Size</string>
-    <string name="hint_name_client">Write Client Name</string>
+    <string name="hint_name_supplier">Write Supplier Name</string>
+    <string name="hint_supplier_phone">Write Supplier Phone</string>
     <string name="action_save">Save</string>
     <string name="action_delete">Delete</string>
     <string name="action_delete_all_entries">Delete All Items</string>
@@ -27,6 +28,6 @@
 
     <string name="editor_activity_title_new_item">Add a new product</string>
 
-    <string name="name_client">Client Name</string>
+    <string name="name_supplier">Supplier Name</string>
 
 </resources>

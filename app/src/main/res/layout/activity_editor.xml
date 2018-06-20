@@ -35,11 +35,13 @@
             <EditText
                 android:id="@+id/edit_price"
                 android:hint="@string/hint_price"
-                style="@style/EditorFieldStyle" />
+                style="@style/EditorFieldStyle"
+                android:inputType="numberDecimal"/>
             <EditText
                 android:id="@+id/edit_amount"
                 android:hint="@string/hint_amount"
-                style="@style/EditorFieldStyle" />
+                style="@style/EditorFieldStyle"
+                android:inputType="numberDecimal"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -72,7 +74,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-
     <!-- Client Details -->
     <LinearLayout
         android:id="@+id/container_measurement"
@@ -80,13 +81,25 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
             <TextView
-                android:text="@string/name_client"
+                android:text="@string/name_supplier"
                 style="@style/CategoryStyle" />
+        <LinearLayout
+            android:id="@+id/container_measurement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <EditText
-                android:id="@+id/edit_client_name"
-                android:hint="@string/hint_name_client"
+                android:id="@+id/edit_supplier_name"
+                android:hint="@string/hint_name_supplier"
                 style="@style/EditorFieldStyle"
                 android:layout_marginLeft="20dp"/>
+            <EditText
+                android:id="@+id/edit_supplier_phone"
+                android:layout_below="@+id/edit_supplier_name"
+                android:hint="@string/hint_supplier_phone"
+                style="@style/EditorFieldStyle"
+                android:layout_marginLeft="20dp"
+                android:inputType="phone" />
     </LinearLayout>
-
+    </LinearLayout>
 </LinearLayout>
